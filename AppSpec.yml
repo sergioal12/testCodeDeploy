@@ -19,7 +19,15 @@ files:
 #[4]type:
 #[6]-[1]object-type
 hooks:
+  ApplicationStop:
+    - location: scripts/install.sh
+      timeout: 300
+      runas: root
+  DownloadBundle:
+    - location: 
+      timeout: 300
+      runas: root
   BeforeInstall:
-      - location: scripts/install.sh
-        timeout: 300
-        runas: root
+    - location: scripts/install.sh
+      timeout: 300
+      runas: root
